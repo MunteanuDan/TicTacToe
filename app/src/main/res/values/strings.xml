@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="welcome_to_tic_tac_toe">Welcome to Tic Tac Toe!</string>
+    <string name="about_game">About Game</string>
+    <string name="play_game">Play Game</string>
+    <string name="score">Score: </string>
+    <string name="_0">0</string>
+    <string name="separator">-</string>
+    <string name="play_game_vs_device">Play game vs device</string>
+    <string name="play_game_1_vs_1">Play game 1 vs 1</string>
+</resources>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/welcome_to_tic_tac_toe"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_play_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_gray"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:text="@string/play_game_1_vs_1"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_play_game_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_gray"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:text="@string/play_game_vs_device"
+        app:layout_constraintTop_toBottomOf="@+id/btn_play_game" />
+
+    <Button
+        android:id="@+id/btn_about_game"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/dark_gray"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/about_game"
+        app:layout_constraintTop_toBottomOf="@+id/btn_play_game_device" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/score"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_about_game" />
+
+    <TextView
+        android:id="@+id/tv_score_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="3dp"
+        android:text="@string/_0"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_score"
+        app:layout_constraintTop_toBottomOf="@+id/btn_about_game" />
+
+    <TextView
+        android:id="@+id/tv_score_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="3dp"
+        android:text="@string/separator"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_score_x"
+        app:layout_constraintTop_toBottomOf="@+id/btn_about_game" />
+
+    <TextView
+        android:id="@+id/tv_score_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="3dp"
+        android:text="@string/_0"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_score_1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_about_game" />
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+
+            <ImageButton
+                android:id="@+id/ib2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+
+            <ImageButton
+                android:id="@+id/ib3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+
+            <ImageButton
+                android:id="@+id/ib5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+
+            <ImageButton
+                android:id="@+id/ib6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+
+            <ImageButton
+                android:id="@+id/ib8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+
+            <ImageButton
+                android:id="@+id/ib9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:onClick="handleImageButtonClick"
+                android:src="@drawable/tictactoe64" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
