@@ -297,9 +297,7 @@ public class MainActivity extends AppCompatActivity {
                 n--;
 
             }
-            if (n == 0) {
-                gameOver1vs1();
-            }
+
 
             // reguli pt X
             if (x1 && x2 && x3) {
@@ -385,6 +383,11 @@ public class MainActivity extends AppCompatActivity {
                 gameOver1vs1();
                 Toast.makeText(getApplicationContext(), "Zero a castigat", Toast.LENGTH_SHORT).show();
             }
+
+            if (n == 0) {
+                gameOver1vs1();
+            }
+
         } else {
             if (n != 0) {
 
@@ -502,9 +505,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-            if (n == 0) {
-                gameOverDevice();
-            }
+
 
             // reguli pt X
             if (x1 && x2 && x3) {
@@ -590,6 +591,11 @@ public class MainActivity extends AppCompatActivity {
                 gameOverDevice();
                 Toast.makeText(getApplicationContext(), "Zero a castigat", Toast.LENGTH_SHORT).show();
             }
+
+            if (n == 0) {
+                gameOverDevice();
+            }
+
         }
 
 
