@@ -391,7 +391,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if (n != 0) {
 
-
                 switch (v.getId()) {
                     case R.id.ib1: {
                         if (!r1) {
